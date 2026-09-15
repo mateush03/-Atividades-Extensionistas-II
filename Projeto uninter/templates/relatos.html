@@ -1,0 +1,144 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Relatos - CidadeParticipa
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="page-header-container">
+
+        <span class="tag">
+            HISTÓRICO
+        </span>
+
+        <h1>
+            Relatos da comunidade
+        </h1>
+
+        <p>
+            Acompanhe os problemas já registrados pelos cidadãos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="form-section">
+
+    <div class="form-container">
+
+        <!-- FILTROS -->
+        <form method="get" action="{{ url_for('relatos') }}" class="form-card" style="margin-bottom: 24px;">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="busca">Buscar</label>
+                    <input type="text" id="busca" name="busca"
+                           placeholder="Palavra-chave..."
+                           value="{{ busca }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria">
+                        <option value="">Todas</option>
+                        {% for cat in categorias %}
+                        <option value="{{ cat.categoria }}"
+                            {% if cat.categoria == categoria %}selected{% endif %}>
+                            {{ cat.categoria }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade"
+                           placeholder="Município"
+                           value="{{ cidade }}">
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <a href="{{ url_for('relatos') }}" class="btn btn-secondary">Limpar</a>
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+            </div>
+
+        </form>
+
+
+        <!-- LISTA DE RELATOS -->
+        {% if relatos %}
+
+            {% for r in relatos %}
+
+            <div class="form-card" style="margin-bottom: 24px;">
+
+                <div class="form-header">
+
+                    <h2>
+                        {{ r.titulo }}
+                        <span class="tag" style="margin-left: 8px;">
+                            {{ r.prioridade }}
+                        </span>
+                    </h2>
+
+                    <p>
+                        <strong>Categoria:</strong> {{ r.categoria }}
+                        &nbsp;|&nbsp;
+                        <strong>Local:</strong> {{ r.bairro }}, {{ r.cidade }}
+                        &nbsp;|&nbsp;
+                        <strong>Ocorrido em:</strong> {{ r.data }}
+                    </p>
+
+                </div>
+
+                <p>
+                    {{ r.descricao[:200] }}
+                    {% if r.descricao|length > 200 %}...{% endif %}
+                </p>
+
+                <div class="form-actions" style="justify-content: flex-end;">
+                    <a href="{{ url_for('detalhe_relato', relato_id=r.id) }}"
+                       class="btn btn-primary">
+                        Ver detalhes
+                    </a>
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="form-card">
+
+                <div class="form-header">
+                    <h2>Nenhum relato encontrado</h2>
+                    <p>
+                        {% if busca or categoria or cidade %}
+                            Nenhum resultado para os filtros aplicados.
+                            <a href="{{ url_for('relatos') }}">Limpar filtros</a>
+                        {% else %}
+                            Ainda não há relatos registrados.
+                            <a href="{{ url_for('novo_relato') }}">Seja o primeiro a relatar!</a>
+                        {% endif %}
+                    </p>
+                </div>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

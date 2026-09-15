@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+CidadeParticipa - Início
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-container">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="hero-text">
+
+            <span class="tag">
+                PARTICIPAÇÃO CIDADÃ
+            </span>
+
+
+            <h1>
+                Sua cidade.
+                <br>
+                Sua voz.
+            </h1>
+
+
+            <p>
+                Ajude a identificar os principais problemas
+                do município e contribua para melhorar os
+                serviços públicos.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('novo_relato') }}"
+                   class="btn btn-primary">
+
+                    Relatar um problema
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="hero-card">
+
+            <div class="city-icon">
+                🏙️
+            </div>
+
+
+            <h2>
+                Participe da transformação
+            </h2>
+
+
+            <p>
+                Registre problemas, acompanhe relatos e
+                contribua com melhorias para sua cidade.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

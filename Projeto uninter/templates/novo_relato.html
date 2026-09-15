@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block title %}
+Relatar problema - CidadeParticipa
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="page-header-container">
+
+        <span class="tag">
+            PARTICIPAÇÃO CIDADÃ
+        </span>
+
+        <h1>
+            Relatar um problema
+        </h1>
+
+        <p>
+            Informe um problema encontrado em sua região.
+            Sua contribuição pode ajudar a melhorar os serviços públicos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="form-section">
+
+    <div class="form-container">
+
+        <form method="POST"
+              action="{{ url_for('novo_relato') }}"
+              class="form-card">
+
+
+            <div class="form-header">
+
+                <h2>
+                    Informações do problema
+                </h2>
+
+                <p>
+                    Preencha os campos abaixo para registrar seu relato.
+                </p>
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <div class="form-group">
+
+                <label for="titulo">
+                    Título do problema
+                </label>
+
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Ex.: Falta de iluminação na rua"
+                    required>
+
+            </div>
+
+
+            <!-- CATEGORIA E PRIORIDADE -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="categoria">
+                        Categoria
+                    </label>
+
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required>
+
+                        <option value="">
+                            Selecione uma categoria
+                        </option>
+
+                        <option value="Segurança">
+                            Segurança
+                        </option>
+
+                        <option value="Saneamento">
+                            Saneamento
+                        </option>
+
+                        <option value="Educação">
+                            Educação
+                        </option>
+
+                        <option value="Saúde">
+                            Saúde
+                        </option>
+
+                        <option value="Transporte">
+                            Transporte
+                        </option>
+
+                        <option value="Iluminação">
+                            Iluminação Pública
+                        </option>
+
+                        <option value="Infraestrutura">
+                            Infraestrutura
+                        </option>
+
+                        <option value="Meio Ambiente">
+                            Meio Ambiente
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="prioridade">
+                        Prioridade percebida
+                    </label>
+
+                    <select
+                        id="prioridade"
+                        name="prioridade"
+                        required>
+
+                        <option value="">
+                            Selecione a prioridade
+                        </option>
+
+                        <option value="Baixa">
+                            Baixa
+                        </option>
+
+                        <option value="Média">
+                            Média
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                        <option value="Urgente">
+                            Urgente
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+
+            <div class="form-group">
+
+                <label for="descricao">
+                    Descrição do problema
+                </label>
+
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    rows="6"
+                    placeholder="Descreva detalhadamente o problema encontrado..."
+                    required></textarea>
+
+            </div>
+            <div class="form-group">
+
+    <label for="email">
+        E-mail para contato
+    </label>
+
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="seuemail@exemplo.com"
+        required>
+
+</div>
+
+            <!-- LOCALIZAÇÃO -->
+
+            <div class="form-divider">
+
+                <h2>
+                    Localização
+                </h2>
+
+                <p>
+                    Informe onde o problema está localizado.
+                </p>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="bairro">
+                        Bairro
+                    </label>
+
+                    <input
+                        type="text"
+                        id="bairro"
+                        name="bairro"
+                        placeholder="Nome do bairro"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="cidade">
+                        Cidade
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        placeholder="Nome do município"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="endereco">
+                    Endereço ou ponto de referência
+                </label>
+
+                <input
+                    type="text"
+                    id="endereco"
+                    name="endereco"
+                    placeholder="Ex.: Rua das Flores, próximo à praça">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="data">
+                    Data da ocorrência
+                </label>
+
+                <input
+                    type="date"
+                    id="data"
+                    name="data">
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="form-actions">
+
+                <a
+                    href="{{ url_for('index') }}"
+                    class="btn btn-secondary">
+
+                    Cancelar
+
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Enviar relato
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

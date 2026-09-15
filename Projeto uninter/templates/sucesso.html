@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+Relato enviado - CidadeParticipa
+{% endblock %}
+
+
+{% block content %}
+
+<section class="success-section">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <span class="tag">
+            RELATO REGISTRADO
+        </span>
+
+
+        <h1>
+            Obrigado pela sua participação!
+        </h1>
+
+
+        <p>
+            Seu relato foi enviado com sucesso.
+        </p>
+
+
+        <p>
+            As informações registradas poderão contribuir
+            para a identificação das necessidades do município.
+        </p>
+
+
+        <div class="success-actions">
+
+            <a
+                href="{{ url_for('novo_relato') }}"
+                class="btn btn-primary">
+
+                Fazer outro relato
+
+            </a>
+
+
+            <a
+                href="{{ url_for('index') }}"
+                class="btn btn-secondary">
+
+                Voltar ao início
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

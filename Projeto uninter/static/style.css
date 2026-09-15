@@ -1,0 +1,931 @@
+/* =========================================================
+   CIDADE PARTICIPA
+   CSS PRINCIPAL
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #111827;
+
+    background: #ffffff;
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    height: 78px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.navbar {
+    width: 1200px;
+    max-width: 90%;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.logo span {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+nav a {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #111827;
+
+    transition: color 0.2s ease;
+}
+
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   HERO - PÁGINA INICIAL
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+
+    background: #f3f6ff;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.hero-container {
+    width: 1200px;
+    max-width: 90%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   HERO - TEXTO
+========================================================= */
+
+.hero-text {
+    padding-bottom: 10px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    color: #2563eb;
+}
+
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    margin-bottom: 28px;
+
+    color: #111827;
+}
+
+
+.hero-text p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    color: #374151;
+
+    margin-bottom: 36px;
+}
+
+
+/* =========================================================
+   HERO - BOTÕES
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 52px;
+
+    padding: 0 24px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.btn-primary {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.btn-primary:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secondary {
+    background: #ffffff;
+
+    color: #111827;
+
+    border: 1px solid #d1d5db;
+}
+
+
+.btn-secondary:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================================
+   HERO - CARD
+========================================================= */
+
+.hero-card {
+    background: #ffffff;
+
+    min-height: 300px;
+
+    padding: 55px 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.city-icon {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 12px;
+
+    color: #111827;
+}
+
+
+.hero-card p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   PÁGINA - CABEÇALHO
+========================================================= */
+
+.page-header {
+    background: #f3f6ff;
+
+    padding: 55px 0;
+}
+
+
+.page-header-container {
+    width: 1200px;
+
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+
+.page-header .tag {
+    margin-bottom: 15px;
+}
+
+
+.page-header h1 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    color: #111827;
+}
+
+
+.page-header p {
+    max-width: 700px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.form-section {
+    background: #f9fafb;
+
+    padding: 60px 0 80px;
+}
+
+
+.form-container {
+    width: 850px;
+
+    max-width: 90%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD DO FORMULÁRIO
+========================================================= */
+
+.form-card {
+    background: #ffffff;
+
+    padding: 45px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   CABEÇALHO DO FORMULÁRIO
+========================================================= */
+
+.form-header {
+    margin-bottom: 35px;
+}
+
+
+.form-header h2 {
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+
+    color: #111827;
+}
+
+
+.form-header p {
+    font-size: 15px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   GRUPOS DO FORMULÁRIO
+========================================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #374151;
+}
+
+
+/* =========================================================
+   INPUTS / SELECT / TEXTAREA
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    font-size: 15px;
+
+    color: #111827;
+
+    background: #ffffff;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* FOCO */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+
+/* =========================================================
+   LINHA COM DOIS CAMPOS
+========================================================= */
+
+.form-row {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.form-row .form-group {
+    flex: 1;
+}
+
+
+/* =========================================================
+   DIVISÃO DA LOCALIZAÇÃO
+========================================================= */
+
+.form-divider {
+    border-top: 1px solid #e5e7eb;
+
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.form-divider h2 {
+    font-size: 22px;
+
+    line-height: 1.3;
+
+    margin-bottom: 5px;
+
+    color: #111827;
+}
+
+
+.form-divider p {
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   BOTÕES DO FORMULÁRIO
+========================================================= */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* =========================================================
+   PÁGINA DE SUCESSO
+========================================================= */
+
+.success-section {
+    min-height: calc(100vh - 78px);
+
+    background: #f3f6ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+.success-card {
+    width: 600px;
+
+    max-width: 100%;
+
+    background: #ffffff;
+
+    padding: 55px 50px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   ÍCONE DE SUCESSO
+========================================================= */
+
+.success-icon {
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 36px;
+
+    font-weight: bold;
+}
+
+
+.success-card .tag {
+    margin-bottom: 12px;
+}
+
+
+.success-card h1 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+    color: #111827;
+}
+
+
+.success-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   BOTÕES DA PÁGINA DE SUCESSO
+========================================================= */
+
+.success-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 60px 0;
+    }
+
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .hero-card {
+        min-height: auto;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .form-container {
+        width: 850px;
+
+        max-width: 90%;
+    }
+
+
+    /* RELAÇÃO DOS CAMPOS */
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    .header {
+        height: auto;
+    }
+
+
+    .navbar {
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    /* MENU */
+
+    nav {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        max-width: 88%;
+
+        padding: 50px 0;
+    }
+
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+
+    /* BOTÕES */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* CARD */
+
+    .hero-card {
+        padding: 40px 30px;
+    }
+
+
+    .hero-card h2 {
+        font-size: 22px;
+    }
+
+
+    /* CABEÇALHO DA PÁGINA */
+
+    .page-header {
+        padding: 45px 0;
+    }
+
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .form-section {
+        padding: 40px 0 60px;
+    }
+
+
+    .form-container {
+        max-width: 92%;
+    }
+
+
+    .form-card {
+        padding: 30px 22px;
+
+        border-radius: 12px;
+    }
+
+
+    .form-header h2 {
+        font-size: 22px;
+    }
+
+
+    /* BOTÕES DO FORMULÁRIO */
+
+    .form-actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+
+    /* SUCESSO */
+
+    .success-section {
+        padding: 40px 20px;
+    }
+
+
+    .success-card {
+        padding: 40px 25px;
+    }
+
+
+    .success-card h1 {
+        font-size: 26px;
+    }
+
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+
+    .success-actions .btn {
+        width: 100%;
+    }
+
+}

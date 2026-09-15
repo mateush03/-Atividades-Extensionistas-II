@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ relato.titulo }} - CidadeParticipa
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="page-header-container">
+
+        <span class="tag">
+            {{ relato.categoria }}
+        </span>
+
+        <h1>
+            {{ relato.titulo }}
+        </h1>
+
+        <p>
+            <strong>Prioridade:</strong> {{ relato.prioridade }}
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="form-section">
+
+    <div class="form-container">
+
+        <div class="form-card">
+
+            <div class="form-header">
+                <h2>Descrição</h2>
+            </div>
+
+            <p>{{ relato.descricao }}</p>
+
+            <div class="form-divider">
+                <h2>Localização</h2>
+            </div>
+
+            <p>
+                <p><strong>E-mail de contato:</strong> {{ relato.email or "Não informado" }}</p>
+                <strong>Endereço:</strong> {{ relato.endereco or "Não informado" }}<br>
+                <strong>Bairro:</strong> {{ relato.bairro }}<br>
+                <strong>Cidade:</strong> {{ relato.cidade }}<br>
+                <strong>Data da ocorrência:</strong> {{ relato.data }}<br>
+                <em>Registrado em {{ relato.criado_em }}</em>
+                
+            </p>
+
+            <div class="form-actions">
+                <a href="{{ url_for('relatos') }}" class="btn btn-secondary">
+                    ← Voltar ao histórico
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
